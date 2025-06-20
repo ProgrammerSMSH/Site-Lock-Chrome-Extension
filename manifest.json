@@ -1,0 +1,24 @@
+{
+     "manifest_version": 3,
+     "name": "PIN Lock Extension",
+     "version": "2.0",
+     "description": "PIN-protect Facebook, Drive and more with blur effect.",
+     "permissions": [
+          "storage"
+     ],
+     "host_permissions": [
+          "*://*.facebook.com/*",
+          "*://drive.google.com/*"
+     ],
+     "content_scripts": [
+          {
+               "matches": [
+                    "*://*.facebook.com/*",
+                    "*://drive.google.com/*"
+               ],
+               "js": [
+                    "content.js"
+               ]
+          }
+     ]
+}
